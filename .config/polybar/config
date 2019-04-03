@@ -53,8 +53,8 @@ module-margin-left = 1
 module-margin-right = 2
 
 font-0 = DejaVuSans:pixelsize=10;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
+font-1 = Font Awesome 5 Free:pixelsize=8
+;font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
 
 modules-left = i3
 modules-center = spotify previous playpause next
@@ -339,7 +339,7 @@ format-charging-underline = #ffb52a
 format-discharging = <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
-label-charging = CHARGING %percentage%%
+label-charging = Charging %percentage%%
 label-discharging = BAT: %percentage%%
 
 format-full-prefix = " "
@@ -422,9 +422,10 @@ interval = 86400
 format = "%{T3}<label>"
 format-padding = 5
 ; Previous song icon
-exec = echo "<"
+exec = echo "<"
+
 format-underline = #1db954
-line-size = 1
+line-size = 1 
 click-left = "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
 
 [module/next]
@@ -441,7 +442,7 @@ click-left = "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org
 [module/playpause]
 type = custom/script
 ; Default
-exec = echo "||/|>"
+exec = echo "play/pause"
 format-underline = #1db954
 line-size = 1
 click-left = "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
