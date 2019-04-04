@@ -228,7 +228,7 @@ interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
 format-connected-underline = ${xrdb:color2}
-label-connected = %essid%
+label-connected =  %essid%
 
 format-disconnected = <label-disconnected>
 format-disconnected-underline = ${self.format-connected-underline}
@@ -338,19 +338,21 @@ full-at = 98
 format-charging = <label-charging>
 format-charging-underline = ${xrdb:color3}
 
-format-discharging = <label-discharging>
+format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
 label-charging =  %percentage%%
-label-discharging = BAT: %percentage%%
+label-discharging = %percentage%%
 
 format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
+ramp-capacity-4 = 
+ramp-capacity-3 = 
+ramp-capacity-2 = 
+ramp-capacity-1 = 
+ramp-capacity-0 = 
 ramp-capacity-foreground = ${colors.foreground-alt}
 
 animation-charging-0 = 
