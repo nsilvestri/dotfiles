@@ -42,7 +42,7 @@ foreground = ${colors.foreground}
 line-size = 3
 line-color = #f00
 
-border-size = 14
+border-size = 0
 border-bottom = 0
 border-color = #00000000
 
@@ -53,7 +53,9 @@ module-margin-left = 1
 module-margin-right = 2
 
 font-0 = DejaVuSans:pixelsize=10;1
-font-1 = Font Awesome 5 Free:pixelsize=8
+font-1 = Font Awesome 5 Free:pixelsize=10;3
+font-2 = Font Awesome 5 Free Solid:pixelsize=10;3
+font-3 = Font Awesome 5 Brands:pixelsize=10;3
 ;font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
 
 modules-left = i3
@@ -420,10 +422,9 @@ menu-2-1-exec = menu-open-0
 type = custom/script
 interval = 86400
 format = "%{T3}<label>"
-format-padding = 5
+format-padding = 3
 ; Previous song icon
-exec = echo "<"
-
+exec = echo ""
 format-underline = ${module/spotify.format-underline}
 line-size = 1 
 click-left = "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
@@ -432,17 +433,19 @@ click-left = "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org
 type = custom/script
 interval = 86400
 format = "%{T3}<label>"
-format-padding = 5
+format-padding = 3
 ; Next song icon
-exec = echo ">"
+exec = echo ""
 format-underline = ${module/spotify.format-underline}
 line-size = 1
 click-left = "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
 
 [module/playpause]
 type = custom/script
+interval = 86400
+format-padding = 3
 ; Default
-exec = echo "play/pause"
+exec = echo " / "
 format-underline = ${module/spotify.format-underline}
 line-size = 1
 click-left = "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
