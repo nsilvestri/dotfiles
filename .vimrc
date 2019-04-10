@@ -1,1 +1,4 @@
-let g:airline_theme='base16-ia-dark'
+set g:airline_theme = "base16"
+let g:airline_powerline_fonts = 1
+set encoding=UTF-8
+
