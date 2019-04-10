@@ -1,2 +1,1 @@
-let g:powerline_pycmd="py3"
-set laststatus=2
+let g:airline_theme='base16-ia-dark'
