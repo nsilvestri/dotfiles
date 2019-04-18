@@ -49,10 +49,10 @@ border-color = #00000000
 padding-left = 0
 padding-right = 0
 
-module-margin-left = 1
-module-margin-right = 2
+module-margin-left = 0
+module-margin-right = 1
 
-font-0 = DejaVuSans:pixelsize=10;2
+font-0 = DejaVuSans Mono for Powerline:pixelsize=10;2
 font-1 = Font Awesome 5 Free:pixelsize=10;2
 font-2 = Font Awesome 5 Free Solid:pixelsize=10;2
 font-3 = Font Awesome 5 Brands:pixelsize=10;2
@@ -116,18 +116,18 @@ type = internal/bspwm
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
-label-focused-padding = 2
+label-focused-padding = 1
 
 label-occupied = %index%
-label-occupied-padding = 2
+label-occupied-padding = 1
 
 label-urgent = %index%!
 label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
+label-urgent-padding = 1
 
 label-empty = %index%
 label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 2
+label-empty-padding = 1
 
 ; Separator in between workspaces
 ; label-separator = |
@@ -424,7 +424,7 @@ menu-2-1-exec = menu-open-0
 type = custom/script
 interval = 86400
 format = "%{T3}<label>"
-format-padding = 3
+format-padding = 1
 ; Previous song icon
 exec = echo ""
 format-underline = ${module/spotify.format-underline}
@@ -435,7 +435,7 @@ click-left = "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org
 type = custom/script
 interval = 86400
 format = "%{T3}<label>"
-format-padding = 3
+format-padding = 1
 ; Next song icon
 exec = echo ""
 format-underline = ${module/spotify.format-underline}
@@ -445,7 +445,7 @@ click-left = "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org
 [module/playpause]
 type = custom/script
 interval = 86400
-format-padding = 3
+format-padding = 1
 ; Default
 exec = echo " / "
 format-underline = ${module/spotify.format-underline}
@@ -456,7 +456,7 @@ click-left = "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org
 type = custom/script
 exec = python3 ~/.config/polybar/scripts/polybar-spotify-controls/spotify_status.py
 interval = 2
-format-padding = 4
+format-padding = 1
 initial = 1
 format-underline = ${xrdb:color5}
 line-size = 1
