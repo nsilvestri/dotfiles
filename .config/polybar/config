@@ -59,7 +59,8 @@ font-3 = Font Awesome 5 Free Solid:pixelsize=10;2
 font-4 = Font Awesome 5 Brands:pixelsize=10;2
 ;font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
 
-separator = "|"
+separator =  " | "
+separator-foreground = ${xrdb:color5}
 
 modules-left = i3
 modules-center = spotify previous playpause next
@@ -265,7 +266,7 @@ format-disconnected =
 type = internal/date
 interval = 1
 
-date = " %Y-%m-%d"
+date = "%Y-%m-%d"
 date-alt = " %a, %B %e, %Y"
 
 time = %I:%M
