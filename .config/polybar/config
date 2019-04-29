@@ -62,8 +62,8 @@ font-4 = Font Awesome 5 Brands:pixelsize=10;2
 separator =  " | "
 separator-foreground = ${xrdb:color5}
 
-modules-left = i3
-modules-center = spotify previous playpause next
+modules-left = i3 spotify 
+modules-center = 
 modules-right = info-redshift-temp xbacklight pulseaudio cpu wlan battery date
 
 tray-position = right
@@ -453,9 +453,9 @@ click-left = "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org
 [module/spotify]
 type = custom/script
 exec = python3 ~/.config/polybar/scripts/polybar-spotify-controls/spotify_status.py
+format = <label>
+label =  %output%
 interval = 2
-format-padding = 1
-initial = 1
 # format-underline = ${xrdb:color5}
 line-size = 1
 
