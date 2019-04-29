@@ -15,7 +15,7 @@ set $right l
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
 new_window pixel 2
-new_float normal
+new_float pixel 2
 
 # Hide borders
 hide_edge_borders none
