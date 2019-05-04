@@ -1,6 +1,9 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+# Set terminal
+set $terminal urxvt
+
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
 
@@ -33,7 +36,7 @@ font xft:DejaVuSans Mono for Powerline:11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminal
+bindsym $mod+Return exec $terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -48,7 +51,7 @@ bindsym $mod+d exec --no-startup-id rofi -show run
 ################################################################################################
 
 # exec --no-startup-id volumeicon
-#bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
+# bindsym $mod+Ctrl+m exec $terminal -e 'alsamixer'
 # exec --no-startup-id pulseaudio
 # exec --no-startup-id pa-applet
 bindsym $mod+Ctrl+m exec pavucontrol
@@ -61,12 +64,11 @@ exec xbindkeys --poll-rc
 # bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
 # Start Applications
-# bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
+# bindsym $mod+Ctrl+b exec $terminal -e 'bmenu'
 bindsym $mod+F2 exec firefox
 bindsym $mod+F3 exec pcmanfm
 # bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec gksu pcmanfm
-bindsym $mod+F5 exec terminal -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
