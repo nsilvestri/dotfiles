@@ -9,8 +9,8 @@ set $mod Mod4
 
 # Set directional keys
 set $left h
-set $up j
-set $down k
+set $up k
+set $down j
 set $right l
 
 # set default desktop layout (default is tiling)
