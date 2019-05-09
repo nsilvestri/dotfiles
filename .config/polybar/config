@@ -52,7 +52,7 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
 
-font-0 = DejaVuSans Mono for Powerline:pixelsize=10;2
+font-0 = DejaVuSansMono Nerd Font:pixelsize=10;2
 font-1 = Siji:pixelsize=10;2
 font-2 = Font Awesome 5 Free:pixelsize=10;2
 font-3 = Font Awesome 5 Free Solid:pixelsize=10;2
@@ -188,7 +188,8 @@ label-song-maxlen = 25
 label-song-ellipsis = true
 
 [module/xbacklight]
-type = internal/xbacklight
+type = internal/backlight
+card = intel_backlight
 
 format = <label> <bar>
 label = BL
@@ -230,7 +231,7 @@ type = internal/network
 interface = wlp3s0
 interval = 3.0
 
-format-connected = <ramp-signal> <label-connected>
+format-connected = <label-connected>
 # format-connected-underline = ${xrdb:color2}
 label-connected = " %essid%"
 
@@ -343,7 +344,7 @@ label-charging =  %percentage%%
 label-discharging = %percentage%%
 
 format-full-prefix = " "
-format-full-prefix-foreground = ${colors.foreground-alt}
+format-full-prefix-foreground = ${colors.foreground}
 # format-full-underline = ${self.format-charging-underline}
 
 ramp-capacity-4 = 
@@ -351,18 +352,18 @@ ramp-capacity-3 = 
 ramp-capacity-2 = 
 ramp-capacity-1 = 
 ramp-capacity-0 = 
-ramp-capacity-foreground = ${colors.foreground-alt}
+ramp-capacity-foreground = ${colors.foreground}
 
 animation-charging-0 = 
 animation-charging-1 = 
 animation-charging-2 = 
-animation-charging-foreground = ${colors.foreground-alt}
+animation-charging-foreground = ${colors.foreground}
 animation-charging-framerate = 750
 
 animation-discharging-0 = -
 animation-discharging-1 = --
 animation-discharging-2 = ---
-animation-discharging-foreground = ${colors.foreground-alt}
+animation-discharging-foreground = ${colors.foreground}
 animation-discharging-framerate = 750
 
 [module/temperature]
