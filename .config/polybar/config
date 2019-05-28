@@ -57,12 +57,11 @@ font-1 = Siji:pixelsize=10;2
 font-2 = Font Awesome 5 Free:pixelsize=10;2
 font-3 = Font Awesome 5 Free Solid:pixelsize=10;2
 font-4 = Font Awesome 5 Brands:pixelsize=10;2
-;font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
 
 separator =  " | "
 separator-foreground = ${xrdb:color5}
 
-modules-left = i3 spotify 
+modules-left = i3 player-mpris-tail 
 modules-center = 
 modules-right = info-redshift-temp xbacklight pulseaudio cpu wlan battery date
 
@@ -387,7 +386,7 @@ ramp-foreground = ${colors.foreground-alt}
 
 [module/info-redshift-temp]
 type = custom/script
-exec = ~/.config/polybar/scripts/info-redshift-temp.sh
+exec = ~/.config/polybar/info-redshift-temp.sh
 interval = 5
 
 [module/powermenu]
@@ -419,46 +418,11 @@ menu-2-0-exec = sudo poweroff
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
 
-[module/previous]
+[module/player-mpris-tail]
 type = custom/script
-interval = 86400
-format = "%{T3}<label>"
-format-padding = 1
-; Previous song icon
-exec = echo ""
-# format-underline = ${module/spotify.format-underline}
-line-size = 1 
-click-left = "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
-
-[module/next]
-type = custom/script
-interval = 86400
-format = "%{T3}<label>"
-format-padding = 1
-; Next song icon
-exec = echo ""
-# format-underline = ${module/spotify.format-underline}
-line-size = 1
-click-left = "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
-
-[module/playpause]
-type = custom/script
-interval = 86400
-format-padding = 1
-; Default
-exec = echo " / "
-# format-underline = ${module/spotify.format-underline}
-line-size = 1
-click-left = "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
-
-[module/spotify]
-type = custom/script
-exec = python3 ~/.config/polybar/scripts/polybar-spotify-controls/spotify_status.py
-format = <label>
-label =  %output%
-interval = 2
-# format-underline = ${xrdb:color5}
-line-size = 1
+exec = ~/.config/polybar/player-mpris-tail.py --icon-playing  --icon-paused  --icon-stopped  --icon-none  -f ' {:artist:t18:{artist}:}{:artist:: :}{:t40:{title}:} %{A1:~/.config/polybar/player-mpris-tail.py previous:}  %{A} %{A1:~/.config/polybar/player-mpris-tail.py play-pause:} {icon-reversed} %{A} %{A1:~/.config/polybar/player-mpris-tail.py next:}  %{A}'
+tail = true
+label = %output%
 
 [settings]
 screenchange-reload = true
