@@ -57,10 +57,10 @@ XTerm*selectToClipboard: true
 Xcursor.theme: Adwaita
 Xcursor.size:                     0
 
-URxvt.font:                       xft:DejaVu Sans Mono Nerd Font:size=10,\
-                                  xft:Font Awesome 5 Free Solid:size=10,\
+URxvt.font:                       xft:Font Awesome 5 Free Solid:size=10,\
                                   xft:Font Awesome 5 Free Regular:size=10,\
                                   xft:Font Awesome 5 Brands:size=10,\
+                                  xft:DejaVu Sans Mono Nerd Font:size=10,\
                                   xft:Siji:size=10
 
 ! alternative font settings with 'terminus':
