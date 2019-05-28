@@ -61,9 +61,9 @@ font-4 = Font Awesome 5 Brands:pixelsize=10;2
 separator =  " | "
 separator-foreground = ${xrdb:color5}
 
-modules-left = i3 player-mpris-tail 
+modules-left = powermenu i3 player-mpris-tail 
 modules-center = 
-modules-right = info-redshift-temp xbacklight pulseaudio cpu wlan battery date
+modules-right = info-redshift-temp xbacklight pulseaudio cpu memory wlan battery date
 
 tray-position = right
 tray-padding = 2
@@ -212,19 +212,16 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = ""
-format-prefix-foreground = ${colors.foreground-alt}
-# format-underline = ${xrdb:color1}
-label =  %percentage:2%%
+format-prefix = ""
+format-prefix-foreground = ${colors.foreground}
+label = %percentage:2%%
 
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #4bffdc
-label = %percentage_used%%
-
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground}
+label = %gb_used% / %gb_total%
 [module/wlan]
 type = internal/network
 interface = wlp3s0
@@ -396,27 +393,36 @@ expand-right = true
 
 format-spacing = 1
 
-label-open = 
-label-open-foreground = ${colors.secondary}
-label-close =  cancel
-label-close-foreground = ${colors.secondary}
+label-open = " ⏻ "
+label-open-foreground = ${colors.foreground}
+label-open-background = ${colors.primary}
+label-close = " ⏻ cancel "
+label-close-foreground = ${colors.foreground}
+label-close-background = ${colors.primary}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
 
-menu-0-0 = reboot
+menu-0-0 = suspend
 menu-0-0-exec = menu-open-1
-menu-0-1 = power off
+menu-0-1 = shutdown
 menu-0-1-exec = menu-open-2
+menu-0-2 = reboot
+menu-0-2-exec = menu-open-3
 
 menu-1-0 = cancel
 menu-1-0-exec = menu-open-0
-menu-1-1 = reboot
-menu-1-1-exec = sudo reboot
+menu-1-1 = suspend
+menu-1-1-exec = systemctl suspend
 
-menu-2-0 = power off
-menu-2-0-exec = sudo poweroff
-menu-2-1 = cancel
-menu-2-1-exec = menu-open-0
+menu-2-0 = cancel
+menu-2-0-exec = menu-open-0
+menu-2-1 = shutdown
+menu-2-1-exec = shutdown now
+
+menu-3-0 = cancel
+menu-3-0-exec = menu-open-0
+menu-3-1 = reboot
+menu-3-1-exec = reboot
 
 [module/player-mpris-tail]
 type = custom/script
