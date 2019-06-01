@@ -69,6 +69,22 @@
 "playerctl stop"
     XF86AudioStop
 
+##################
+# OSRS MouseKeys #
+##################
+"xdotool click --delay 1 -- 1"
+    F1
+
+"xdotool mousemove_relative --sync -- -35 0"
+    F2
+
+"xdotool click --delay 1 -- 1"
+    F3
+
+"xdotool mousemove_relative --sync -- 35 0"
+    F4
+
+
 ##################################
 # End of xbindkeys configuration #
 ##################################
