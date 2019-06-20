@@ -62,7 +62,7 @@ separator-foreground = ${colors.primary}
 
 modules-left = powermenu i3 player-mpris-tail 
 modules-center = 
-modules-right = info-redshift-temp xbacklight pulseaudio cpu memory wlan battery date
+modules-right = info-redshift-temp xbacklight pulseaudio cpu memory battery date
 
 tray-position = right
 tray-padding = 2
