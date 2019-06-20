@@ -47,8 +47,8 @@ border-color = #00000000
 padding-left = 0
 padding-right = 0
 
-module-margin-left = 0
-module-margin-right = 0
+module-margin-left = 3
+module-margin-right = 3
 
 font-0 = DejaVuSansMono Nerd Font:pixelsize=10;2
 font-1 = Siji:pixelsize=10;2
@@ -56,7 +56,7 @@ font-2 = Font Awesome 5 Free:pixelsize=10;2
 font-3 = Font Awesome 5 Free Solid:pixelsize=10;2
 font-4 = Font Awesome 5 Brands:pixelsize=10;2
 
-separator = " | "
+;separator = " | "
 ; how tf do u get separator colors
 separator-foreground = ${colors.primary}
 
@@ -65,7 +65,7 @@ modules-center =
 modules-right = info-redshift-temp xbacklight pulseaudio cpu memory battery date
 
 tray-position = right
-tray-padding = 2
+tray-padding = 0
 ;tray-background = #0063ff
 
 ;wm-restack = bspwm
@@ -212,14 +212,12 @@ card = intel_backlight
 type = internal/cpu
 interval = 2
 format-prefix = " "
-format-prefix-foreground = ${colors.primary}
 label =  %percentage:2%%
 
 [module/memory]
 type = internal/memory
 interval = 2
 format-prefix = " "
-format-prefix-foreground = ${colors.primary}
 label = %gb_used% / %gb_total%
 
 [module/wlan]
@@ -270,7 +268,6 @@ time = %I:%M
 time-alt = %I:%M:%S
 
 format-prefix = " " 
-format-prefix-foreground = ${colors.primary}
 # format-underline = ${xrdb:color4}
 
 label = %date% %time%
@@ -284,7 +281,6 @@ ramp-volume-1 = 奔
 ramp-volume-2 = 墳
 # not the same set; nerd fonts disadvantage
 ramp-volume-3 = 
-ramp-volume-foreground = ${colors.primary}
 label-volume = %percentage%%
 
 label-muted =  muted
