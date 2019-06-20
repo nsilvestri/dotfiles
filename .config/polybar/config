@@ -32,7 +32,7 @@ height = 27
 ;offset-x = 1%
 ;offset-y = 1%
 radius = 0.0
-fixed-center = false
+fixed-center = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -45,10 +45,11 @@ border-bottom = 0
 border-color = #00000000
 
 padding-left = 0
-padding-right = 6
+;padding is 2*module-margins below. It's for padding against the system tray
+padding-right = 4
 
-module-margin-left = 3
-module-margin-right = 3
+module-margin-left = 2
+module-margin-right = 2
 
 font-0 = DejaVuSansMono Nerd Font:pixelsize=10;2
 font-1 = Siji:pixelsize=10;2
@@ -60,12 +61,12 @@ font-4 = Font Awesome 5 Brands:pixelsize=10;2
 ; how tf do u get separator colors
 separator-foreground = ${colors.primary}
 
-modules-left = powermenu i3 player-mpris-tail 
+modules-left = i3 player-mpris-tail 
 modules-center = date 
 modules-right = info-redshift-temp xbacklight pulseaudio cpu memory filesystem battery
 
 tray-position = right
-tray-padding = 0
+tray-padding = 3
 ;tray-background = #0063ff
 
 ;wm-restack = bspwm
