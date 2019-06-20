@@ -63,7 +63,7 @@ separator-foreground = ${colors.primary}
 
 modules-left = i3 player-mpris-tail 
 modules-center = date 
-modules-right = info-redshift-temp xbacklight pulseaudio cpu memory filesystem battery
+modules-right = info-redshift-temp cpu memory filesystem battery xbacklight pulseaudio 
 
 tray-position = right
 tray-padding = 3
