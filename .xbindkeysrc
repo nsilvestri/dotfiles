@@ -72,17 +72,17 @@
 ##################
 # OSRS MouseKeys #
 ##################
-"xdotool click --delay 1 -- 1"
-    F1
+# "xdotool click --delay 1 -- 1"
+#     F5
 
-"xdotool mousemove_relative --sync -- -35 0"
-    F2
+# "xdotool mousemove_relative --sync -- -35 0"
+#     F6
 
-"xdotool click --delay 1 -- 1"
-    F3
+# "xdotool click --delay 1 -- 1"
+#     F7
 
-"xdotool mousemove_relative --sync -- 35 0"
-    F4
+# "xdotool mousemove_relative --sync -- 35 0"
+#     F8
 
 
 ##################################
