@@ -170,19 +170,8 @@ label-song-ellipsis = true
 type = internal/backlight
 card = intel_backlight
 
-format = <label> <bar>
-label = " "
-
-bar-width = 10
-bar-indicator = |
-bar-indicator-foreground = ${colors.foreground}
-bar-indicator-font = 2
-bar-fill = ─
-bar-fill-font = 2
-bar-fill-foreground = ${colors.primary}
-bar-empty = ─
-bar-empty-font = 2
-bar-empty-foreground = ${colors.foreground}
+format = <label> 
+label = " %percentage%%"
 
 [module/backlight-acpi]
 inherit = module/xbacklight
