@@ -18,8 +18,6 @@ set expandtab       " Expand TABs to spaces
 """ vim-plug """
 call plug#begin()
 Plug 'dylanaraps/wal.vim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 """"""""""""""""
 
