@@ -14,3 +14,13 @@ set shiftwidth=4    " Indents will have a width of 4
 set softtabstop=4   " Sets the number of columns for a TAB
 
 set expandtab       " Expand TABs to spaces
+
+""" vim-plug """
+call plug#begin()
+Plug 'dylanaraps/wal.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+call plug#end()
+""""""""""""""""
+
+colorscheme wal
