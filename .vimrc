@@ -1,8 +1,10 @@
-syntax on
-set number
-let g:airline_powerline_fonts = 1
-let g:airline_theme="base16color"
-set encoding=utf-8
+syntax on           " Syntax highlighting
+
+set t_Co=16         " 16 colors, for wal compatibility
+
+set number          " Line numbers
+
+set encoding=utf-8  " Encoding, helps character display (I think)
 
 set tabstop=4       " The width of a TAB is set to 4.
                     " Still it is a \t. It is just that
