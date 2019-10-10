@@ -103,3 +103,5 @@ alias ls="ls --color=auto --group-directories-first"
 # &   # Runs in background
 # ( ) # Hid eshell job control messages
 (cat ~/.cache/wal/sequences &)
+
+eval $(thefuck --alias)
