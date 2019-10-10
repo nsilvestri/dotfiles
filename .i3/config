@@ -309,7 +309,7 @@ exec --no-startup-id /usr/lib/kdeconnectd
 # exec_always --no-startup-id sbxkb
 # exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
-exec --no-startup-id xautolock -time 10 -locker $HOME/scripts/glitchlock.sh
+# exec --no-startup-id xautolock -time 10 -locker $locker
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
