@@ -104,4 +104,8 @@ alias ls="ls --color=auto --group-directories-first"
 # ( ) # Hid eshell job control messages
 (cat ~/.cache/wal/sequences &)
 
+# thefuck
 eval $(thefuck --alias)
+
+# zsh syntax highlighting; should be last
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
