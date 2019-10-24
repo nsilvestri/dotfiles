@@ -1,3 +1,4 @@
 # Dark theme.
 rofi.theme: ~/.cache/wal/colors-rofi-dark.rasi
-rofi.font: SauceCodePro Nerd Font 10
+rofi.font: SauceCodePro Nerd Font 12
+rofi.dpi: 144
