@@ -270,6 +270,7 @@ format-discharging = <ramp-capacity> <label-discharging>
 # format-discharging-underline = ${self.format-charging-underline}
 
 label-charging = [  %percentage%% ]
+label-full = [  %percentage%% ]
 label-discharging = %percentage%% ]
 
 ramp-capacity-4 = [ 
