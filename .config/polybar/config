@@ -73,7 +73,7 @@ font-4 = Font Awesome 5 Brands:pixelsize=12;2
 ;separator = " | "
 modules-left = i3 player-mpris-tail 
 modules-center = date 
-modules-right = info-redshift-temp cpu memory filesystem battery xbacklight pulseaudio 
+modules-right = info-nordvpn info-redshift-temp cpu memory filesystem battery xbacklight pulseaudio 
 
 tray-position = right
 tray-padding = 3
@@ -295,6 +295,11 @@ animation-discharging-framerate = 750
 [module/info-redshift-temp]
 type = custom/script
 exec = ~/.config/polybar/info-redshift-temp.sh
+interval = 5
+
+[module/info-nordvpn]
+type = custom/script
+exec = ~/.config/polybar/info-nordvpn.sh
 interval = 5
 
 [module/powermenu]
