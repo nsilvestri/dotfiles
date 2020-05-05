@@ -99,7 +99,7 @@ interval = 25
 
 mount-0 = /
 
-label-mounted = [  %mountpoint%: %used% used of %total% ]
+label-mounted = [  %mountpoint%: %used% / %total% ]
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
