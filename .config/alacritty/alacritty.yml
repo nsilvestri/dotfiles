@@ -13,8 +13,8 @@
   #TERM: xterm-256color
 
 dpi:
-  x: 144.0
-  y: 144.0
+  x: 96.0
+  y: 96.0
 
 window:
   # Window dimensions (changes require restart)
@@ -104,7 +104,7 @@ font:
 
   # Point size
   ## alacritty uses a font scaling of device pixel ratio = 1.667, this is a hack to fix it for now/if I ever look at it again
-  size: 12.0
+  size: 11.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
