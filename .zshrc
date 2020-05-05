@@ -97,7 +97,8 @@ source $ZSH/oh-my-zsh.sh
 
 # i3conf alias
 alias i3conf="vim ~/.i3/config"
-alias ls="ls --color=auto --group-directories-first"
+alias ls='exa'
+alias ll='exa -l'
 
 # generate wal colorscheme on new terminal
 # &   # Runs in background
