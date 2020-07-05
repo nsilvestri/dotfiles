@@ -74,8 +74,9 @@ font:
     #   - (macOS) Menlo
     #   - (Linux) monospace
     #   - (Windows) Consolas
-    family: SauceCodePro Nerd Font
-    # family: TerminessTTF Nerd Font
+    family: Gohu GohuFont
+    #family: SauceCodePro Nerd Font
+    #family: TerminessTTF Nerd Font
 
     # The `style` can be specified to pick a specific face.
     #style: Regular
@@ -104,7 +105,7 @@ font:
 
   # Point size
   ## alacritty uses a font scaling of device pixel ratio = 1.667, this is a hack to fix it for now/if I ever look at it again
-  size: 11.0
+  size: 14.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
