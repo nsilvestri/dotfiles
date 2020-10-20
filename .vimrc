@@ -3,6 +3,7 @@ syntax on           " Syntax highlighting
 set t_Co=16         " 16 colors, for wal compatibility
 
 set number          " Line numbers
+set relativenumber  " And relative line numbers
 
 set encoding=utf-8  " Encoding, helps character display (I think)
 
