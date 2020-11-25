@@ -60,8 +60,8 @@ exec xbindkeys --poll-rc
 ################################################################################################
 
 # Screen brightness controls
-# bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
-# bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10%
+bindsym XF86MonBrightnessUp exec --no-startup-id light -A 10%
 
 # Start Applications
 # bindsym $mod+Ctrl+b exec $terminal -e 'bmenu'
@@ -225,7 +225,6 @@ for_window [class="Skype"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
-for_window [title="RuneLite"] floating enable
 
 # https://github.com/ValveSoftware/steam-for-linux/issues/1040
 # for_window [class="^Steam$" title="^Friends$"] floating enable border normal
@@ -412,5 +411,3 @@ mode "$mode_gaps_outer" {
 }
 
 # force bind brightness keys
-bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10%
-bindsym XF86MonBrightnessUp exec --no-startup-id light -A 10%
