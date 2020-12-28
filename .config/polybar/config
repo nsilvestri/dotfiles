@@ -64,16 +64,15 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = Gohu GohuFont:pixelsize=14;2
-font-1 = SauceCodePro Nerd Font:pixelsize=12;2
-font-2 = Font Awesome 5 Free:pixelsize=12;2
-font-3 = Font Awesome 5 Free Solid:pixelsize=12;2
-font-4 = Font Awesome 5 Brands:pixelsize=12;2
+font-0 = FiraCode Nerd Font Mono:pixelsize=12;2
+font-1 = Font Awesome 5 Free:pixelsize=12;2
+font-2 = Font Awesome 5 Free Solid:pixelsize=12;2
+font-3 = Font Awesome 5 Brands:pixelsize=12;2
 
 ;separator = " | "
 modules-left = i3 player-mpris-tail 
 modules-center = date 
-modules-right = info-nordvpn info-redshift-temp cpu memory filesystem battery xbacklight pulseaudio 
+modules-right = info-nordvpn cpu memory filesystem 
 
 tray-position = right
 tray-padding = 3
@@ -99,7 +98,8 @@ interval = 25
 
 mount-0 = /
 
-label-mounted = [  %mountpoint%: %used% / %total% ]
+label-mounted = [ disk: %percentage_used%% ]
+;label-mounted = [  %mountpoint%: %used% / %total% ]
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -174,12 +174,14 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-label =  [  %percentage:2%% ]
+label = [ cpu: %percentage:2%% ]
+;label = [  %percentage:2%% ]
 
 [module/memory]
 type = internal/memory
 interval = 2
-label = [  %gb_used% / %gb_total% ]
+label = [ ram: %percentage_used%% ]
+;label = [  %gb_used% / %gb_total% ]
 
 # format-connected-underline = #55aa55
 format-connected-prefix = " "
