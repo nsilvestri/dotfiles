@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH="$HOME/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -99,6 +99,8 @@ source $ZSH/oh-my-zsh.sh
 alias i3conf="vim ~/.i3/config"
 alias ls='exa'
 alias ll='exa -l'
+alias la='exa -a'
+alias lla='exa -l -a'
 
 # generate wal colorscheme on new terminal
 # &   # Runs in background
@@ -108,8 +110,6 @@ alias ll='exa -l'
 # thefuck
 eval $(thefuck --alias)
 
-# zsh syntax highlighting; should be last
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # extract function
 # extract <file1> <file2>
@@ -147,3 +147,6 @@ extract() {
     done
     return "$e"
 }
+
+# zsh syntax highlighting; should be last
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
